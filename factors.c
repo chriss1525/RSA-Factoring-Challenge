@@ -4,12 +4,12 @@
  * factors - breaks numbers into factorials
  * Return: 0 (success)
  */
-int factors(unsigned long long n)
+int factors(mytypedef_t n)
 {
-	unsigned long long w = n / 2;
-	unsigned long long p;
-	unsigned long long q;
-	
+	mytypedef_t w = n / 2;
+	mytypedef_t p;
+	mytypedef_t q;
+
 	for (q = 2; q <= w; q++)
 	{
 		if (n % q == 0)

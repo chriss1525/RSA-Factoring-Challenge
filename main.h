@@ -6,6 +6,8 @@
 #include "string.h"
 #include "math.h"
 
+typedef __UINT64_MAX__t mytypedef_t
+
 int factors(unsigned long long n);
 int prime_factors(unsigned long long n);
 
