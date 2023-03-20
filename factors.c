@@ -1,11 +1,13 @@
 #include "main.h"
+#include "math.h"
 /**
  * factors - breaks numbers into factorials
  * Return: 0 (success)
  */
+
 int factors(unsigned long long n)
 {
-	unsigned long long w = n / 2;
+	unsigned long long w = sqrt(n);
 	unsigned long long p;
 	unsigned long long q;
 	for (q = 2; q <= w; q++)
@@ -16,6 +18,6 @@ int factors(unsigned long long n)
 			break;
 		}
 	}
-	printf("%llu=%llu*%llu\n", n, p, q);
-	return (0);
+	printf("%llu=%llu*%llu\n", n, q, p);
+	return 0;
 }

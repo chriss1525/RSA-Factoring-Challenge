@@ -9,17 +9,18 @@
 
 int main(int argc, char **argv)
 {
-    int *n;
+    unsigned long long int *n;
     FILE *str;
 
     if (argc != 2)
-        return(EXIT_FAILURE);
+        return (EXIT_FAILURE);
 
-    n = malloc(512);
+    n = malloc(1024);
     str = fopen(argv[1], "r");
 
-    while (fscanf(str, "%d", n) == 1)
+    while (fscanf(str, "%llu", n) == 1)
         factors(*n);
 
+    fclose(str);
     return (0);
 }
