@@ -6,6 +6,7 @@
 #include "string.h"
 #include "math.h"
 
-int factors(unsigned long long n);
+void factorize(mpz_t n);
+int is_prime(mpz_t n);
 
 #endif /*main_h*/
